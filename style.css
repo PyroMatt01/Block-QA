@@ -2446,12 +2446,106 @@ body {
 }
 
 .brand-name:after {
-    width: 2.5rem;
+    width: 3.75rem;
     height: 2px;
     margin-top: .65rem;
-    background: #c0c0c0;
+    background: #800080;
     content: ""
 }
+
+.accent-purple {
+    color: #800080
+}
+
+.accent-purple-bg {
+    background-color: #800080
+}
+
+.infra-outline {
+    border-color: #800080
+}
+
+.infra-outline:hover {
+    border-color: #a000a0;
+    box-shadow: 0 0 0 1px rgba(128,0,128,.35),0 10px 28px rgba(128,0,128,.42)
+}
+
+a[href^="https://wa.me/"]:hover {
+    box-shadow: 0 0 0 1px rgba(47,111,94,.4),0 10px 30px rgba(47,111,94,.55)
+}
+
+.hero-brand-line {
+    width: 6rem
+}
+
+@media (min-width:640px) {
+    .hero-brand-line {
+        width: 8.5rem
+    }
+}
+
+@media (min-width:1024px) {
+    .hero-brand-line {
+        width: 10rem
+    }
+}
+
+/* Moving constellation backgrounds */
+.constellation-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden
+}
+
+.constellation-bg {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    pointer-events: none
+}
+
+.constellation-canvas {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+#companies .company-card {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1f24
+}
+
+.company-email {
+    margin-top: auto;
+    padding-top: 1.25rem;
+    color: #800080
+}
+
+.company-email:hover {
+    color: #a000a0
+}
+
+.footer-email-purple {
+    border-color: #800080
+}
+
+.footer-email-purple:hover {
+    border-color: #a000a0
+}
+
+.contact-service-card {
+    transition: transform .25s ease,border-color .25s ease,box-shadow .25s ease
+}
+
+.contact-service-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(128,0,128,.7);
+    box-shadow: 0 14px 32px rgba(0,0,0,.22),0 0 20px rgba(128,0,128,.1)
+}
+
 
 .brand-logo-header {
     width: 2.75rem;
@@ -3062,9 +3156,9 @@ body.menu-open {
 .company-card:hover,
 .company-card:focus-within {
     transform: translateY(-10px);
-    border-color: rgba(255,255,255,.22);
+    border-color: rgba(128,0,128,.78);
     background-color: rgba(255,255,255,.07);
-    box-shadow: 0 20px 45px rgba(0,0,0,.32), 0 0 24px rgba(217,221,225,.06)
+    box-shadow: 0 20px 45px rgba(0,0,0,.32),0 0 24px rgba(128,0,128,.2)
 }
 
 @media (prefers-reduced-motion:reduce) {
