@@ -8,6 +8,14 @@
         <title>BLOCKS</title>
     </head>
     <body class="min-w-0">
+        <div class="site-loader" role="status" aria-label="Loading BLOCKS">
+            <div class="site-loader-mark">
+                <span class="site-loader-ring" aria-hidden="true"></span>
+                <img src="images/brand/blocks-wolf-logo.png" alt="" width="82" height="82" aria-hidden="true">
+            </div>
+            <span class="site-loader-name">BLOCKS</span>
+            <span class="site-loader-line" aria-hidden="true"></span>
+        </div>
         <!-- Site header and primary navigation -->
         <header class="site-header fixed inset-x-0 top-0 z-50 transition duration-300 bg-[#11161B]/82 backdrop-blur-lg">
             <nav class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
@@ -173,9 +181,10 @@
                 </div>
             </section>
 
-            <!-- Contact section -->
-            <section id="contact" class="bg-[#151A20] py-16 md:py-20">
-                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <!-- Infra Services preview -->
+            <section id="infra-services" class="bg-[#151A20] py-16 md:py-20">
+                <a href="infra-services.html" class="infra-section-link block" aria-label="Open the Infra Services page">
+                    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div class="overflow-hidden rounded-[2.2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] p-8 text-white shadow-[0_28px_90px_rgba(0,0,0,0.18)] backdrop-blur-sm sm:p-10 lg:p-12">
                         <h2 class="font-heading text-3xl font-semibold text-white sm:text-4xl">Infra Services</h2>
                         <div class="mt-8 grid gap-4 sm:grid-cols-2">
@@ -201,7 +210,8 @@
                             </article>
                         </div>
                     </div>
-                </div>
+                    </div>
+                </a>
             </section>
         </main>
 
@@ -490,7 +500,7 @@
                                     context.moveTo(first.x, first.y);
                                     context.lineTo(second.x, second.y);
                                     context.lineWidth = .5;
-                                    context.strokeStyle = `rgba(196,166,202,${(1 - distance / maxDistance) * sharedOpacity * .58})`;
+                                    context.strokeStyle = `rgba(128,0,128,${(1 - distance / maxDistance) * sharedOpacity * .82})`;
                                     context.stroke();
                                 }
                             }
@@ -501,9 +511,9 @@
                             const alpha = Math.min(.62, particle.opacity * (1 + particle.proximity * .55));
                             context.beginPath();
                             context.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-                            context.fillStyle = `rgba(225,207,228,${alpha})`;
-                            context.shadowColor = "rgba(128,0,128,.35)";
-                            context.shadowBlur = particle.proximity > 0 ? 5 : 2;
+                            context.fillStyle = `rgba(191,72,191,${alpha})`;
+                            context.shadowColor = "rgba(128,0,128,.7)";
+                            context.shadowBlur = particle.proximity > 0 ? 7 : 3;
                             context.fill();
                         }
                     }
@@ -526,5 +536,6 @@
 
             document.querySelectorAll(".constellation-canvas").forEach((canvas) => new ConstellationNetwork(canvas));
         </script>
+        <script src="site-loader.js"></script>
     </body>
 </html>

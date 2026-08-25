@@ -2470,6 +2470,16 @@ body {
     box-shadow: 0 0 0 1px rgba(128,0,128,.35),0 10px 28px rgba(128,0,128,.42)
 }
 
+.infra-section-link {
+    color: inherit;
+    cursor: pointer
+}
+
+.infra-section-link:focus-visible {
+    outline: 2px solid #800080;
+    outline-offset: -4px
+}
+
 a[href^="https://wa.me/"]:hover {
     box-shadow: 0 0 0 1px rgba(47,111,94,.4),0 10px 30px rgba(47,111,94,.55)
 }
@@ -2518,6 +2528,13 @@ a[href^="https://wa.me/"]:hover {
     background-color: #1a1f24
 }
 
+#companies .company-card h3 .accent-purple {
+    display: inline-block;
+    font-size: 1.6em;
+    line-height: .8;
+    vertical-align: -.04em
+}
+
 .company-email {
     margin-top: auto;
     padding-top: 1.25rem;
@@ -2545,7 +2562,6 @@ a[href^="https://wa.me/"]:hover {
     border-color: rgba(128,0,128,.7);
     box-shadow: 0 14px 32px rgba(0,0,0,.22),0 0 20px rgba(128,0,128,.1)
 }
-
 
 .brand-logo-header {
     width: 2.75rem;
@@ -2642,6 +2658,133 @@ a[href^="https://wa.me/"]:hover {
         transition: none;
         transform: none
     }
+}
+
+/* Free vulnerability assessment */
+.assessment-section {
+    background: radial-gradient(circle at 16% 18%, rgba(128,0,128,.07), transparent 32%), #11161b;
+    padding: 4rem max(1.5rem, calc((100vw - 92rem)/2))
+}
+
+.assessment-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(32rem, 1.05fr);
+    gap: 2.5rem;
+    align-items: center
+}
+
+.assessment-eyebrow {
+    color: rgba(255,255,255,.58);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .35em
+}
+
+.assessment-title {
+    margin-top: 1.35rem;
+    max-width: 46rem;
+    color: #fff;
+    font-family: var(--font-heading, inherit);
+    font-size: clamp(2.1rem, 3.2vw, 3.3rem);
+    font-weight: 700;
+    line-height: 1.06
+}
+
+.assessment-title>span,
+.assessment-dot { color: #800080 }
+
+.assessment-summary {
+    margin-top: 1.5rem;
+    max-width: 42rem;
+    color: rgba(232,230,225,.72);
+    font-size: 1.1rem;
+    line-height: 1.6
+}
+
+.assessment-benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2.3rem
+}
+
+.assessment-benefits p {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .25rem 1rem;
+    border-left: 1px solid rgba(255,255,255,.16);
+    color: #fff;
+    font-size: .82rem;
+    line-height: 1.45
+}
+
+.assessment-benefits svg {
+    width: 2.15rem;
+    height: 2.15rem;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: #800080;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+
+.assessment-benefits p:first-child { border-left: 0; padding-left: 0 }
+
+.assessment-card {
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 1.5rem;
+    background: rgba(255,255,255,.025)
+}
+
+.assessment-card-body {
+    display: grid;
+    grid-template-columns: 1fr 1.08fr;
+    min-height: 21rem
+}
+
+.assessment-list-wrap { padding: 2rem 0 1.5rem 2rem }
+.assessment-list-wrap h3 { color: #fff; font-size: 1.25rem; font-weight: 700 }
+.assessment-list-wrap ul { margin-top: 1.1rem; color: #fff; font-size: .82rem; line-height: 1.5 }
+.assessment-list-wrap li { position: relative; margin-top: .9rem; padding-left: 2rem }
+.assessment-list-wrap li:before {
+    position: absolute;
+    left: 0;
+    top: -.05rem;
+    display: grid;
+    width: 1.25rem;
+    height: 1.25rem;
+    place-items: center;
+    border-radius: 50%;
+    background: #800080;
+    color: #fff;
+    content: "✓";
+    font-size: .72rem
+}
+
+.assessment-image { width: 100%; height: 100%; object-fit: contain; object-position: center }
+.assessment-card-footer { display: flex; align-items: center; gap: 1rem; border-top: 1px solid rgba(255,255,255,.1); padding: 1rem 1.75rem }
+.assessment-card-footer p { display: flex; min-width: 12rem; align-items: center; gap: .75rem; color: #fff; font-size: .8rem; line-height: 1.35 }
+.assessment-shield { display: grid; width: 2.8rem; height: 2.8rem; flex: 0 0 auto; place-items: center }
+.assessment-shield svg { width: 2.7rem; height: 2.7rem; fill: rgba(128,0,128,.2); stroke: #a64ca6; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round }
+.assessment-button { display: flex; flex: 1; align-items: center; justify-content: center; gap: .65rem; border-radius: .55rem; background: #188c48; padding: .9rem 1rem; color: #fff; text-align: center; font-weight: 700; transition: background-color .2s ease, transform .2s ease }
+.assessment-button svg { width: 1.45rem; height: 1.45rem; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round }
+.assessment-button:hover { background: #20a457; transform: translateY(-2px) }
+
+@media (max-width: 1050px) {
+    .assessment-layout { grid-template-columns: 1fr }
+}
+
+@media (max-width: 640px) {
+    .assessment-section { padding: 3.5rem 1rem }
+    .assessment-benefits { grid-template-columns: repeat(2, 1fr); row-gap: 1.25rem }
+    .assessment-benefits p:nth-child(3) { border-left: 0; padding-left: 0 }
+    .assessment-card-body { grid-template-columns: 1fr }
+    .assessment-list-wrap { padding: 1.5rem }
+    .assessment-image { max-height: 17rem }
+    .assessment-card-footer { flex-direction: column; align-items: stretch }
+    .assessment-card-footer p { min-width: 0 }
 }
 
 .scrollbar-hide {
@@ -3212,6 +3355,93 @@ body.menu-open {
 }
 
 /* Company card hover animation */
+.site-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.1rem;
+    background: radial-gradient(circle at center, #260026 0, #130014 24%, #090d11 68%);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .55s ease, visibility .55s ease
+}
+
+.site-loader.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+.site-loader-mark {
+    position: relative;
+    display: grid;
+    width: 7.5rem;
+    height: 7.5rem;
+    place-items: center
+}
+
+.site-loader-mark img {
+    position: relative;
+    z-index: 2;
+    width: 5.15rem;
+    height: 5.15rem;
+    object-fit: contain;
+    filter: drop-shadow(0 0 14px rgba(128,0,128,.7));
+    animation: loader-logo-pulse 1.6s ease-in-out infinite
+}
+
+.site-loader-ring {
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(128,0,128,.3);
+    border-top-color: #a82ca8;
+    border-right-color: rgba(168,44,168,.68);
+    border-radius: 50%;
+    box-shadow: 0 0 22px rgba(128,0,128,.18);
+    animation: loader-ring-spin 1.25s linear infinite
+}
+
+.site-loader-name {
+    padding-left: .48em;
+    color: #fff;
+    font-family: var(--font-heading, inherit);
+    font-size: .9rem;
+    font-weight: 500;
+    letter-spacing: .48em
+}
+
+.site-loader-line {
+    position: relative;
+    overflow: hidden;
+    width: 8rem;
+    height: 1px;
+    background: rgba(255,255,255,.12)
+}
+
+.site-loader-line:after {
+    position: absolute;
+    inset: 0;
+    width: 45%;
+    background: #800080;
+    box-shadow: 0 0 8px #800080;
+    content: "";
+    animation: loader-line-move 1.15s ease-in-out infinite
+}
+
+@keyframes loader-ring-spin { to { transform: rotate(360deg) } }
+@keyframes loader-logo-pulse { 50% { opacity: .78; transform: scale(.96) } }
+@keyframes loader-line-move { from { transform: translateX(-110%) } to { transform: translateX(225%) } }
+
+@media (prefers-reduced-motion:reduce) {
+    .site-loader-mark img,
+    .site-loader-ring,
+    .site-loader-line:after { animation: none }
+}
+
 .site-header {
     z-index: 50;
     background: rgba(17,22,27,.72)
@@ -3228,6 +3458,17 @@ body.menu-open {
     transform-origin: center center
 }
 
+.infra-services-hero-background {
+    object-position: center center;
+    opacity: .92;
+    filter: saturate(1.25) contrast(1.06);
+    transform: scale(1.03)
+}
+
+.infra-services-hero-overlay {
+    background: linear-gradient(180deg,rgba(16,7,22,.38),rgba(18,7,25,.58) 55%,rgba(11,15,19,.84))
+}
+
 @media (min-width:640px) {
     .site-hero {
         padding-top: 7rem
@@ -3242,6 +3483,12 @@ body.menu-open {
     .hero-background {
         object-position: center 62%;
         transform: scale(1.24)
+    }
+
+    .infra-services-hero-background {
+        object-position: 68% center;
+        opacity: .82;
+        transform: scale(1.08)
     }
 }
 

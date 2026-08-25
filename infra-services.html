@@ -9,6 +9,14 @@
         <title>Infra Services | BLOCKS</title>
     </head>
     <body class="min-w-0">
+        <div class="site-loader" role="status" aria-label="Loading BLOCKS">
+            <div class="site-loader-mark">
+                <span class="site-loader-ring" aria-hidden="true"></span>
+                <img src="images/brand/blocks-wolf-logo.png" alt="" width="82" height="82" aria-hidden="true">
+            </div>
+            <span class="site-loader-name">BLOCKS</span>
+            <span class="site-loader-line" aria-hidden="true"></span>
+        </div>
         <!-- Site header -->
         <header class="site-header fixed inset-x-0 top-0 z-50 transition duration-300 bg-[#11161B]/82 backdrop-blur-lg">
             <nav class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
@@ -58,9 +66,9 @@
         <main class="min-h-screen">
             <!-- Infrastructure hero -->
             <section class="site-hero relative overflow-hidden bg-[#11161B] pb-20 pt-24 sm:pb-24">
-                <img alt="Enterprise infrastructure environment" fetchpriority="high" decoding="async" class="hero-background object-cover opacity-28" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/hero/hero-01.jpg"/>
+                <img alt="Secure cloud and data-center infrastructure network" fetchpriority="high" decoding="async" class="hero-background infra-services-hero-background object-cover" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/sections/infra-services-background.png"/>
                 <div class="absolute inset-0 opacity-[0.08]" style="background-image:linear-gradient(rgba(255,255,255,0.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.1) 1px,transparent 1px);background-size:52px 52px" aria-hidden="true"></div>
-                <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,15,19,0.62),rgba(11,15,19,0.84)_55%,rgba(11,15,19,0.98))]" aria-hidden="true"></div>
+                <div class="infra-services-hero-overlay absolute inset-0" aria-hidden="true"></div>
                 <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div class="max-w-5xl">
                         <p class="accent-purple text-xs font-semibold uppercase tracking-[0.34em]">What We Fight</p>
@@ -159,28 +167,43 @@
                 </div>
             </section>
 
-            <!-- Contact call to action -->
-            <section id="contact" class="bg-[#151A20] py-16 md:py-20">
-                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div class="grid gap-10 rounded-[2.2rem] border border-white/10 bg-white/[0.04] p-8 sm:p-10 lg:grid-cols-2 lg:items-center lg:p-12">
-                        <div>
-                            <p class="text-xs font-semibold uppercase tracking-[0.34em] text-white/56">Start a conversation</p>
-                            <h2 class="font-heading mt-5 text-3xl font-semibold text-white sm:text-4xl">Build a stronger infrastructure foundation<span class="accent-purple">.</span></h2>
-                            <p class="mt-5 text-base leading-8 text-[#E8E6E1] sm:text-lg">Tell us what must stay available, secure, and scalable. We’ll help define the right path forward.</p>
+            <!-- Free vulnerability assessment -->
+            <section id="contact" class="assessment-section">
+                <div class="assessment-layout">
+                    <div class="assessment-intro">
+                        <p class="assessment-eyebrow">AT BLOCKS</p>
+                        <h2 class="assessment-title">We do <span>Free Vulnerability Assessment</span> for Industry<span class="assessment-dot">.</span></h2>
+                        <p class="assessment-summary">Identify security gaps, reduce risk, and strengthen your infrastructure with our expert-led assessment.</p>
+                        <div class="assessment-benefits" aria-label="Assessment benefits">
+                            <p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path><path d="m9 12 2 2 4-4"></path></svg><span>Detect<br>Vulnerabilities</span></p>
+                            <p><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3M8 8h6M8 11h6M8 14h3"></path></svg><span>Prioritized<br>Risk Insights</span></p>
+                            <p><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"></path></svg><span>Improve<br>Security Posture</span></p>
+                            <p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V14M9 20V10M14 20V6M19 20V2M3 10l5-4 5 1 7-6"></path></svg><span>Build Trust &amp;<br>Compliance</span></p>
                         </div>
-                        <div class="flex flex-col items-center justify-center gap-3 py-6">
-                            <a href="mailto:Matt.blockup@gmail.com" style="width:100%;max-width:16rem" class="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-[#D1BE98] bg-[#D1BE98] px-4 py-2 text-sm font-semibold text-[#11161B] transition hover:border-[#C3AE84] hover:bg-[#C3AE84]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                                Matt.blockup@gmail.com
-                            </a>
-                            <a href="https://wa.me/916380436024" target="_blank" rel="noopener noreferrer" style="width:100%;max-width:16rem" class="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-[#2F6F5E] bg-[#2F6F5E] px-4 py-2 text-sm font-semibold text-white transition hover:border-[#285B4D] hover:bg-[#285B4D]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
-                                WhatsApp
-                            </a>
+                    </div>
+
+                    <div class="assessment-card">
+                        <div class="assessment-card-body">
+                            <div class="assessment-list-wrap">
+                                <h3>What You Get</h3>
+                                <ul>
+                                    <li>Comprehensive security scanning</li>
+                                    <li>Identify vulnerabilities &amp; misconfigurations</li>
+                                    <li>Risk analysis with business impact</li>
+                                    <li>Actionable recommendations</li>
+                                    <li>Report &amp; expert consultation</li>
+                                </ul>
+                            </div>
+                            <img src="images/sections/cybersecurity-laptop.png" alt="Cybersecurity assessment dashboard on a laptop" class="assessment-image">
+                        </div>
+                        <div class="assessment-card-footer">
+                            <p><span class="assessment-shield"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path><path d="m9 12 2 2 4-4"></path></svg></span><span>Stronger today.<br>Safer tomorrow.</span></p>
+                            <a href="mailto:Matt.blockup@gmail.com" class="assessment-button"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"></path></svg><span>Schedule Your Free Assessment</span></a>
                         </div>
                     </div>
                 </div>
             </section>
+
         </main>
 
         <!-- Site footer -->
@@ -275,5 +298,6 @@
                 if (event.key === "Escape") setMobileMenu(false);
             });
         </script>
+        <script src="site-loader.js"></script>
     </body>
 </html>

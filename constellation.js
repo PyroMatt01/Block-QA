@@ -181,7 +181,7 @@ class ConstellationNetwork {
                                     context.moveTo(first.x, first.y);
                                     context.lineTo(second.x, second.y);
                                     context.lineWidth = .5;
-                                    context.strokeStyle = `rgba(196,166,202,${(1 - distance / maxDistance) * sharedOpacity * .58})`;
+                                    context.strokeStyle = `rgba(128,0,128,${(1 - distance / maxDistance) * sharedOpacity * .82})`;
                                     context.stroke();
                                 }
                             }
@@ -192,9 +192,9 @@ class ConstellationNetwork {
                             const alpha = Math.min(.62, particle.opacity * (1 + particle.proximity * .55));
                             context.beginPath();
                             context.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-                            context.fillStyle = `rgba(225,207,228,${alpha})`;
-                            context.shadowColor = "rgba(128,0,128,.35)";
-                            context.shadowBlur = particle.proximity > 0 ? 5 : 2;
+                            context.fillStyle = `rgba(191,72,191,${alpha})`;
+                            context.shadowColor = "rgba(128,0,128,.7)";
+                            context.shadowBlur = particle.proximity > 0 ? 7 : 3;
                             context.fill();
                         }
                     }
