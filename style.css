@@ -2663,12 +2663,15 @@ a[href^="https://wa.me/"]:hover {
 /* Free vulnerability assessment */
 .assessment-section {
     background: radial-gradient(circle at 16% 18%, rgba(128,0,128,.07), transparent 32%), #11161b;
-    padding: 4rem max(1.5rem, calc((100vw - 92rem)/2))
+    padding: 4rem clamp(1rem,3vw,2rem)
 }
 
 .assessment-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(32rem, 1.05fr);
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
     gap: 2.5rem;
     align-items: center
 }
